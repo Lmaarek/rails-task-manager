@@ -1,0 +1,19 @@
+<!-- <h1>Add a task</h1>
+<form action="/tasks">
+  <label>Name</label>
+  <input type="text" name="name">
+  <label>Status</label>
+  <input type="boolean" name="status">
+  <input type="submit" name="">
+</form>
+
+ -->
+ <<h1>Add a task</h1>
+<%= form_for(@task) do |f| %>
+  <%= f.label :name, "name" %>
+  <%= f.text_field :name %>
+  <%= f.label :status, "status"%>
+  <%= f.check_box :status %>
+  <%= f.submit %>
+<% end %>
+
